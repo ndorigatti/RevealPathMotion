@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp"
+              tools:context="it.ndorigatti.android.revealpathmotion.DetailActivity">
+
+    <TextView
+            android:id="@+id/title_big"
+            style="@android:style/TextAppearance.Material.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/primary_text_default_material_light"
+            android:textSize="@dimen/end_title_size"
+            android:transitionName="bigtitle"
+            tools:text="Gazzetta Dello Sport"
+            />
+
+    <FrameLayout
+            android:id="@+id/img_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/preview_bw"
+                android:transitionName="thumbnail"/>
+
+        <FrameLayout
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:transitionName="hello"/>
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/subtitle"
+            style="@android:style/TextAppearance.Material.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text_default_material_light"
+            android:transitionName="subtitle"
+            tools:text="Sabato 13 Dicembre, 2014"/>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:id="@+id/card_row_thumb_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:transitionName="hello"
+            android:foreground="?android:selectableItemBackground">
+
+        <ImageView
+                android:id="@+id/card_row_thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_margin="8dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="120dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/preview_bw"
+                android:transitionName="thumbnail"/>
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/title_big"
+            style="@android:style/TextAppearance.Material.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Gazzetta Dello Sport"
+            android:textColor="@color/primary_text_default_material_light"
+            android:textSize="@dimen/starting_title_size"
+            android:transitionName="bigtitle"/>
+
+    <TextView
+            android:id="@+id/subtitle"
+            style="@android:style/TextAppearance.Material.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:color="@color/secondary_text_default_material_light"
+            android:text="Sabato 13 Dicembre, 2014"
+            android:textSize="@dimen/starting_sub_size"
+            android:transitionName="subtitle"/>
+
+
+</LinearLayout>

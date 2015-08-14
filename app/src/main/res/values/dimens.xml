@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Below size for text animation-->
+    <dimen name="small_text_size">24sp</dimen>
+    <dimen name="large_text_size">48sp</dimen>
+
+    <dimen name="starting_title_size">16sp</dimen>
+    <dimen name="end_title_size">24sp</dimen>
+
+    <dimen name="starting_sub_size">12sp</dimen>
+    <dimen name="end_sub_size">16sp</dimen>
+</resources>

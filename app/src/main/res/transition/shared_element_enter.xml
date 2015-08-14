@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000">
+    <changeBounds>
+        <arcMotion android:minimumHorizontalAngle="45"
+                   android:minimumVerticalAngle="45"
+                   android:maximumAngle="90"/>
+    </changeBounds>
+    <changeTransform />
+    <changeImageTransform />
+    <transitionSet android:transitionOrdering="sequential">
+        <transition class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
+            android:transitionVisibilityMode="mode_out"/>
+        <transition class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
+            android:transitionVisibilityMode="mode_in"/>
+        <targets>
+            <target android:targetId="@id/thumbnail" />
+            <target android:targetName="snapshot" />
+        </targets>
+    </transitionSet>
+</transitionSet>
