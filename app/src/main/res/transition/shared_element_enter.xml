@@ -1,21 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~   Copyright (c) 2015 Nicola Dorigatti.
+  ~
+  ~   Licensed under the Apache License, Version 2.0 (the "License");
+  ~   you may not use this file except in compliance with the License.
+  ~   You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~   Unless required by applicable law or agreed to in writing, software
+  ~   distributed under the License is distributed on an "AS IS" BASIS,
+  ~   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~   See the License for the specific language governing permissions and
+  ~   limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="1000">
+               android:duration="1000">
     <changeBounds>
-        <arcMotion android:minimumHorizontalAngle="45"
-                   android:minimumVerticalAngle="45"
-                   android:maximumAngle="90"/>
-    </changeBounds>
-    <changeTransform />
-    <changeImageTransform />
-    <transitionSet android:transitionOrdering="sequential">
-        <transition class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
-            android:transitionVisibilityMode="mode_out"/>
-        <transition class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
-            android:transitionVisibilityMode="mode_in"/>
+        <arcMotion
+                android:minimumHorizontalAngle="45"
+                android:minimumVerticalAngle="45"
+                android:maximumAngle="90"/>
         <targets>
-            <target android:targetId="@id/thumbnail" />
-            <target android:targetName="snapshot" />
+            <target android:targetName="snapshot"/>
+            <target android:targetName="reveal"/>
+        </targets>
+    </changeBounds>
+    <changeTransform>
+        <targets>
+            <target android:targetName="snapshot"/>
+            <target android:targetName="reveal"/>
+        </targets>
+    </changeTransform>
+    <changeImageTransform>
+        <targets>
+            <target android:targetName="snapshot"/>
+            <target android:targetName="reveal"/>
+        </targets>
+    </changeImageTransform>
+    <transitionSet android:transitionOrdering="sequential">
+        <transition
+                class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
+                android:transitionVisibilityMode="mode_out"/>
+        <transition
+                class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
+                android:transitionVisibilityMode="mode_in"/>
+        <targets>
+            <target android:targetId="@id/thumbnail"/>
+            <target android:targetName="snapshot"/>
         </targets>
     </transitionSet>
 </transitionSet>
