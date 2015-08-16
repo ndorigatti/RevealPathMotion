@@ -45,7 +45,7 @@ public class EnterSharedElementRevealCallback extends SharedElementCallback {
         if (mSnapshot != null) {
             mSnapshot.setVisibility(View.VISIBLE);
         }
-        mActivity.findViewById(R.id.thumbnail).setVisibility(View.INVISIBLE);
+        mActivity.findViewById(R.id.image_thumbnail).setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -55,12 +55,12 @@ public class EnterSharedElementRevealCallback extends SharedElementCallback {
         if (mSnapshot != null) {
             mSnapshot.setVisibility(View.INVISIBLE);
         }
-        mActivity.findViewById(R.id.thumbnail).setVisibility(View.VISIBLE);
+        mActivity.findViewById(R.id.image_thumbnail).setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onMapSharedElements(List<String> names, Map<String, View> sharedElements) {
-        mActivity.findViewById(R.id.thumbnail).setVisibility(View.INVISIBLE);
+        mActivity.findViewById(R.id.image_thumbnail).setVisibility(View.INVISIBLE);
     }
 
     private void addSnapshot(List<String> sharedElementNames, List<View> sharedElements, List<View> sharedElementSnapshots, boolean relayoutContainer) {

@@ -47,7 +47,7 @@
                 class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
                 android:transitionVisibilityMode="mode_in"/>
         <targets>
-            <target android:targetId="@id/thumbnail"/>
+            <target android:targetId="@id/image_thumbnail"/>
             <target android:targetName="snapshot"/>
         </targets>
     </transitionSet>

@@ -16,36 +16,40 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="1000" android:transitionOrdering="sequential">
-    <transition class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
-        android:transitionVisibilityMode="mode_out">
+               android:duration="1000"
+               android:transitionOrdering="sequential">
+    <transition
+            class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
+            android:transitionVisibilityMode="mode_out">
         <targets>
-            <target android:targetId="@id/thumbnail" />
+            <target android:targetId="@id/image_thumbnail"/>
         </targets>
     </transition>
     <transitionSet>
         <changeBounds>
-            <arcMotion android:minimumHorizontalAngle="45"
-                       android:minimumVerticalAngle="45"
-                       android:maximumAngle="90"/>
+            <arcMotion
+                    android:minimumHorizontalAngle="45"
+                    android:minimumVerticalAngle="45"
+                    android:maximumAngle="90"/>
             <targets>
-                <target android:targetName="reveal" />
+                <target android:targetName="reveal"/>
             </targets>
         </changeBounds>
-        <changeTransform >
+        <changeTransform>
             <targets>
-                <target android:targetName="reveal" />
+                <target android:targetName="reveal"/>
             </targets>
         </changeTransform>
-        <changeImageTransform >
+        <changeImageTransform>
             <targets>
-                <target android:targetName="reveal" />
+                <target android:targetName="reveal"/>
             </targets>
         </changeImageTransform>
-        <transition class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
-            android:transitionVisibilityMode="mode_in">
+        <transition
+                class="it.ndorigatti.android.revealpathmotion.transitions.RevealTransition"
+                android:transitionVisibilityMode="mode_in">
             <targets>
-                <target android:targetName="snapshot" />
+                <target android:targetName="snapshot"/>
             </targets>
         </transition>
     </transitionSet>

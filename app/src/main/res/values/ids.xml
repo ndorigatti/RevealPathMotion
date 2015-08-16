@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~   Copyright (c) 2015 Nicola Dorigatti.
   ~
@@ -15,12 +16,5 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <resources>
-    <string name="app_name">RevealPathMotion</string>
-    <string name="title_activity_ending">EndingActivity</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_text">Gazzetta Dello Sport</string>
-    <string name="subtitle_text">Sabato 13 Dicembre, 2014</string>
-
+    <item type="id" name="image_thumbnail"/>
 </resources>

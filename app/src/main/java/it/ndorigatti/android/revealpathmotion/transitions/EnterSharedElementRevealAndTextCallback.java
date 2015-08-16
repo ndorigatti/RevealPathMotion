@@ -36,6 +36,8 @@ import it.ndorigatti.android.revealpathmotion.R;
 public class EnterSharedElementRevealAndTextCallback extends SharedElementCallback {
 
     private static final String TAG = "EnterShrdElRev&TxtCbk";
+
+    private final int mEndingImageViewId = R.id.image_thumbnail;
     //Activity for resources lookup
     private Activity mActivity;
     //snapshot view for reveal
@@ -66,7 +68,7 @@ public class EnterSharedElementRevealAndTextCallback extends SharedElementCallba
         if (mSnapshot != null) {
             mSnapshot.setVisibility(View.VISIBLE);
         }
-        mActivity.findViewById(R.id.thumbnail).setVisibility(View.INVISIBLE);
+        mActivity.findViewById(mEndingImageViewId).setVisibility(View.INVISIBLE);
 
         // -------------------
         //Now do the code for the Text Animation
@@ -97,7 +99,7 @@ public class EnterSharedElementRevealAndTextCallback extends SharedElementCallba
         if (mSnapshot != null) {
             mSnapshot.setVisibility(View.INVISIBLE);
         }
-        mActivity.findViewById(R.id.thumbnail).setVisibility(View.VISIBLE);
+        mActivity.findViewById(mEndingImageViewId).setVisibility(View.VISIBLE);
 
         // -------------------
         //Now do the code for the Text Animation
@@ -123,7 +125,7 @@ public class EnterSharedElementRevealAndTextCallback extends SharedElementCallba
     //Override for reveal motion
     @Override
     public void onMapSharedElements(List<String> names, Map<String, View> sharedElements) {
-        mActivity.findViewById(R.id.thumbnail).setVisibility(View.INVISIBLE);
+        mActivity.findViewById(mEndingImageViewId).setVisibility(View.INVISIBLE);
     }
 
     //Reveal method for snapshot view

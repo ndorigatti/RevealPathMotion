@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:text="Gazzetta Dello Sport"
+            android:text="@string/title_text"
             android:textColor="@color/primary_text_default_material_light"
             android:textSize="@dimen/starting_title_size"
             android:transitionName="bigtitle"/>
@@ -62,7 +62,7 @@
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:color="@color/secondary_text_default_material_light"
-            android:text="Sabato 13 Dicembre, 2014"
+            android:text="@string/subtitle_text"
             android:textSize="@dimen/starting_sub_size"
             android:transitionName="subtitle"/>
 

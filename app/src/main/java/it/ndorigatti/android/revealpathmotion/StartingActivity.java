@@ -35,7 +35,6 @@ public class StartingActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starting);
         findViewById(R.id.container).setOnClickListener(this);
-
     }
 
     @Override
@@ -46,13 +45,12 @@ public class StartingActivity extends Activity implements View.OnClickListener {
                         StartingActivity.this,
                         Pair.create(v.findViewById(R.id.title_big), "bigtitle"),
                         Pair.create(v.findViewById(R.id.subtitle), "subtitle"),
-                       // Pair.create(v.findViewById(R.id.card_row_thumbnail), "thumbnail"),
                         Pair.create(v.findViewById(R.id.card_row_thumb_feedback), "reveal")//CircularRevealImage
                          );
 
         Intent intent = new Intent(StartingActivity.this, EndingActivity.class);
-        intent.putExtra("bigtitle", "Gazzetta Dello Sport");
-        intent.putExtra("subtitle", "Sabato 13 Dicembre, 2014");
+        intent.putExtra("bigtitle", getString(R.string.title_text));
+        intent.putExtra("subtitle", getString(R.string.subtitle_text));
         ActivityCompat.startActivity(StartingActivity.this, intent, options.toBundle());
     }
 }

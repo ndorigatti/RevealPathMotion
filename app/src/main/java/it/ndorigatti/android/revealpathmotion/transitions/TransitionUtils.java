@@ -17,13 +17,9 @@
 package it.ndorigatti.android.revealpathmotion.transitions;
 
 import android.transition.ChangeBounds;
-import android.transition.ChangeClipBounds;
-import android.transition.ChangeImageTransform;
-import android.transition.ChangeTransform;
 import android.transition.Fade;
 import android.transition.Transition;
 import android.transition.TransitionSet;
-import android.view.animation.AccelerateInterpolator;
 
 import java.util.List;
 
@@ -41,8 +37,7 @@ public final class TransitionUtils {
         return fade;
     }
 
-    public static Transition makeSharedElementEnterTransition(List<String> textTransitionNames,
-                                                              List<String> imageNames) {
+    public static Transition makeSharedElementEnterTransition(List<String> textTransitionNames) {
         TransitionSet set = new TransitionSet();
         set.setOrdering(TransitionSet.ORDERING_TOGETHER);
 
@@ -59,24 +54,6 @@ public final class TransitionUtils {
         set.addTransition(recolor);
         set.addTransition(changeBounds);
         set.addTransition(textSize);
-
-        if (!imageNames.isEmpty()) {
-            Transition imageTransf = new ChangeImageTransform();
-            Transition imageClip = new ChangeClipBounds();
-            Transition changeTransform = new ChangeTransform();
-            for (String imgName : imageNames) {
-                changeBounds.addTarget(imgName);
-                imageTransf.addTarget(imgName);
-                imageClip.addTarget(imgName);
-                changeTransform.addTarget(imgName);
-            }
-
-            changeBounds.setInterpolator(new AccelerateInterpolator());
-
-            set.addTransition(imageTransf);
-            set.addTransition(imageClip);
-            set.addTransition(changeTransform);
-        }
 
         ///set.setDuration(3000);
         return set;

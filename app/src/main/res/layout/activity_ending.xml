@@ -32,7 +32,7 @@
             android:textSize="@dimen/end_title_size"
             android:transitionName="bigtitle"
             tools:text="Gazzetta Dello Sport"
-            />
+            android:text="@string/title_text"/>
 
     <FrameLayout
             android:id="@+id/img_container"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content">
 
         <ImageView
-                android:id="@+id/thumbnail"
+                android:id="@id/image_thumbnail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -67,6 +67,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/primary_text_default_material_light"
             android:transitionName="subtitle"
-            tools:text="Sabato 13 Dicembre, 2014"/>
+            tools:text="Sabato 13 Dicembre, 2014"
+            android:text="@string/subtitle_text"/>
 
 </LinearLayout>

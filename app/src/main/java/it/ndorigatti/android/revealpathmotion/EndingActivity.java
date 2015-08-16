@@ -56,12 +56,11 @@ public class EndingActivity extends Activity {
         List<String> textNames = new ArrayList<>();
         textNames.add("bigtitle");
         textNames.add("subtitle");
-        List<String> imgNames = new ArrayList<>();
-        //imgNames.add("thumbnail");
         getWindow().setEnterTransition(TransitionUtils.makeEnterTransition());
         /** --------------------- ENTER TRANSITION ------------------------------ */
         //Get the "Text" transition
-        Transition textTransition = TransitionUtils.makeSharedElementEnterTransition(textNames, imgNames);
+        Transition textTransition = TransitionUtils.makeSharedElementEnterTransition(textNames);
+        textTransition.setDuration(900);
         //Get the "Reveal" transition
         Transition revealTransition = TransitionInflater.from(this).inflateTransition(R.transition.shared_element_enter);
         revealTransition.setDuration(800);
@@ -79,9 +78,9 @@ public class EndingActivity extends Activity {
         //Create a set for the return
         TransitionSet returnSet = new TransitionSet();
         returnSet.setOrdering(TransitionSet.ORDERING_TOGETHER);
-        set.addTransition(returnTransition);
-        //set.addTransition(textTransition);FIXME this does break everything!
-        getWindow().setSharedElementReturnTransition(returnTransition); //FIXME This return transition does break a bit the text return!
+        returnSet.addTransition(returnTransition);
+        returnSet.addTransition(textTransition);
+        getWindow().setSharedElementReturnTransition(returnSet);
 
         //---------------------- SHARED ELEMENT CALLBACK
         // setEnterSharedElementCallback(new EnterSharedElementTextCallback(this));// Use this for "TextSmooth" only
@@ -97,6 +96,6 @@ public class EndingActivity extends Activity {
     @Override
     public void finishAfterTransition() {
         super.finishAfterTransition();
-        findViewById(R.id.thumbnail).setVisibility(View.VISIBLE);
+        findViewById(R.id.image_thumbnail).setVisibility(View.VISIBLE);
     }
 }
